@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Agricultura — Prof. Asoc. Dr. Gamulescu Oliviu Mihnea</title>
+
+    <!-- Reveal.js din CDN — fara instalare, gratuit -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/night.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/monokai.css">
+
+    <style>
+        /* Personalizare tema */
+        .reveal {
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+            font-weight: 700;
+        }
+        .reveal h1 { font-size: 1.8em; color: #4fc3f7; }
+        .reveal h2 { font-size: 1.3em; color: #81c784; }
+        .reveal h3 { font-size: 1.1em; color: #ffcc80; }
+
+        /* Card verde pentru informatii cheie */
+        .card-info {
+            background: rgba(46, 125, 50, 0.25);
+            border: 1px solid #2e7d32;
+            border-radius: 10px;
+            padding: 16px 24px;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        /* Card albastru */
+        .card-blue {
+            background: rgba(21, 101, 192, 0.25);
+            border: 1px solid #1565c0;
+            border-radius: 10px;
+            padding: 16px 24px;
+            margin: 10px 0;
+        }
+
+        /* Card rosu — atentie */
+        .card-red {
+            background: rgba(183, 28, 28, 0.3);
+            border: 1px solid #c62828;
+            border-radius: 10px;
+            padding: 14px 20px;
+            margin: 10px 0;
+        }
+
+        /* Grid 2 coloane */
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            text-align: left;
+        }
+
+        /* Grid 3 coloane */
+        .grid3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            text-align: center;
+        }
+
+        /* Cifra mare evidentiata */
+        .cifra-mare {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #4fc3f7;
+            display: block;
+        }
+
+        /* Eticheta sub cifra */
+        .eticheta-mica {
+            font-size: 0.7em;
+            color: #aaa;
+            display: block;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.65em;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+        .badge-verde { background: #2e7d32; color: white; }
+        .badge-portocaliu { background: #e65100; color: white; }
+
+        /* Cod inline */
+        .cod {
+            font-family: 'Courier New', monospace;
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #80cbc4;
+        }
+
+        /* Linie separator */
+        .separator {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin: 14px 0;
+        }
+
+        .autor {
+            font-size: 0.65em;
+            color: #aaa;
+            margin-top: 8px;
+        }
+
+        .fragment-box {
+            border-left: 3px solid #4fc3f7;
+            padding-left: 14px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ====================================================
+     SLIDE 1 — Titlu
+     ==================================================== -->
+<section data-background-gradient="linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%)">
+    <h1>Inteligenta Artificiala<br>in Agricultura Romaniei</h1>
+    <hr class="separator">
+    <p style="font-size:0.9em; color:#81c784">
+        De la drone la decizii automate APIA
+    </p>
+    <br>
+    <p class="autor">
+        <strong>Prof. Asoc. Dr. Gamulescu Oliviu Mihnea</strong><br>
+        Universitatea Constantin Brancusi — Targu Jiu<br>
+        Consilier Superior APIA Centrul Judetean Gorj<br>
+        <em>2026</em>
+    </p>
+</section>
+
+<!-- ====================================================
+     SLIDE 2 — De ce AI in agricultura?
+     ==================================================== -->
+<section>
+    <h2>De ce AI in agricultura?</h2>
+
+    <div class="grid2">
+        <div class="card-red">
+            <h3>Provocari actuale</h3>
+            <ul style="font-size:0.75em">
+                <li>Schimbari climatice accelerate</li>
+                <li>Cresterea costurilor de productie</li>
+                <li>Deficit de forta de munca rurala</li>
+                <li>Controale APIA insuficiente ca numar</li>
+            </ul>
+        </div>
+        <div class="card-info">
+            <h3>Ce ofera AI</h3>
+            <ul style="font-size:0.75em">
+                <li>Analiza <strong>390 parcele in 4.6 secunde</strong></li>
+                <li>Detectie automata anomalii (frauda, calamitate)</li>
+                <li>Prognoza productie din date satelitare</li>
+                <li>Alerte agricole in timp real pe telefon</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card-blue" style="margin-top:16px; font-size:0.8em">
+        <strong>Contextul PAC 2023-2027:</strong> Regulamentul UE 2021/2116 impune
+        utilizarea tehnologiilor avansate de teledetectie in verificarea cererilor APIA.
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 3 — Indici spectrali
+     ==================================================== -->
+<section>
+    <h2>Indici spectrali din drone si sateliti</h2>
+
+    <div class="grid3" style="font-size:0.8em">
+        <div class="card-info">
+            <span class="cifra-mare">NDVI</span>
+            <span class="eticheta-mica">Vegetatie verde</span>
+            <hr class="separator">
+            <small>(NIR-R)/(NIR+R)<br>0.65 = sanatoas<br>0.38 = anomalie</small>
+        </div>
+        <div class="card-info">
+            <span class="cifra-mare">NDRE</span>
+            <span class="eticheta-mica">Stress azot</span>
+            <hr class="separator">
+            <small>(NIR-RE)/(NIR+RE)<br>detectie precoce<br>deficit nutritiv</small>
+        </div>
+        <div class="card-info">
+            <span class="cifra-mare">NDWI</span>
+            <span class="eticheta-mica">Apa in sol</span>
+            <hr class="separator">
+            <small>(G-NIR)/(G+NIR)<br>monitorizare<br>irigatie si inundatii</small>
+        </div>
+    </div>
+
+    <div class="card-blue" style="margin-top:16px; font-size:0.78em">
+        <strong>Sentinel-2 (ESA)</strong> — imagini satelitare gratuite la 10m rezolutie,
+        actualizate la 5 zile. <span class="cod">Open-Meteo</span> — date meteo gratuite,
+        fara API key. Ambele utilizate in proiectele de cercetare UCB-APIA.
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 4 — Pipeline AI (animat)
+     ==================================================== -->
+<section>
+    <h2>Pipeline AI: de la imagine la decizie</h2>
+
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#4fc3f7">1. Captura imagine</strong> — Drona multispectral / Sentinel-2
+    </div>
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#81c784">2. Procesare OpenCV</strong> — segmentare parcele, calcul NDVI
+    </div>
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#ffcc80">3. Clasificare AI</strong> — RandomForest: grau / porumb / rapita / anomalie
+    </div>
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#ef9a9a">4. Detectie anomalii</strong> — IsolationForest: incendiu / frauda / calamitate
+    </div>
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#ce93d8">5. Export GIS</strong> — Shapefile Stereo70 + GeoJSON + GPX
+    </div>
+    <div class="fragment-box fragment" style="font-size:0.82em">
+        <strong style="color:#80cbc4">6. Raport oficial</strong> — Word + PDF cu Reg. UE 2021/2116
+    </div>
+
+    <div class="card-info fragment" style="margin-top:14px; font-size:0.75em; text-align:center">
+        <strong>Rezultat: 390 parcele — 12.474 ha — procesate in 4.6 secunde</strong>
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 5 — Rezultate Machine Learning
+     ==================================================== -->
+<section>
+    <h2>Rezultate Machine Learning</h2>
+
+    <div class="grid3">
+        <div class="card-info" style="font-size:0.8em">
+            <span class="cifra-mare">79.7%</span>
+            <span class="eticheta-mica">Acuratete clasificare culturi</span>
+        </div>
+        <div class="card-info" style="font-size:0.8em">
+            <span class="cifra-mare">98.6%</span>
+            <span class="eticheta-mica">Acuratete detectie anomalii</span>
+        </div>
+        <div class="card-info" style="font-size:0.8em">
+            <span class="cifra-mare">100%</span>
+            <span class="eticheta-mica">Acuratete textura GLCM</span>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="grid2" style="font-size:0.78em; margin-top:10px">
+        <div>
+            <strong style="color:#81c784">Modele utilizate:</strong>
+            <ul>
+                <li>RandomForestClassifier</li>
+                <li>RandomForestRegressor (R2=0.765)</li>
+                <li>IsolationForest (nesupervizat)</li>
+                <li>GLCM + Haralick texture</li>
+            </ul>
+        </div>
+        <div>
+            <strong style="color:#ffcc80">Date de intrare:</strong>
+            <ul>
+                <li>7 indici spectrali (NDVI, NDRE, NDWI...)</li>
+                <li>Date meteo Open-Meteo (real)</li>
+                <li>Imagini drone procesate OpenCV</li>
+                <li>Baza de date SQLite 5 tabele</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 6 — Aplicatii APIA
+     ==================================================== -->
+<section data-background-gradient="linear-gradient(135deg, #1b2a1b 0%, #1a3a1c 100%)">
+    <h2>Aplicatii directe APIA Gorj</h2>
+
+    <div class="grid2" style="font-size:0.78em">
+        <div class="card-info">
+            <h3>Control pe teren automatizat</h3>
+            <ul>
+                <li>Detectie suprafete declarate incorect</li>
+                <li>Identificare incendii si inundatii</li>
+                <li>Prioritizare controale dupa risc AI</li>
+                <li>Export GPS pentru inspector in teren</li>
+            </ul>
+        </div>
+        <div class="card-info">
+            <h3>Alerte si raportare</h3>
+            <ul>
+                <li>Bot Telegram: alerte meteo pe telefon</li>
+                <li>Email automat catre fermieri</li>
+                <li>Raport Word + PDF in 4.6 secunde</li>
+                <li>Harti LPIS interactive in browser</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card-blue" style="margin-top:14px; font-size:0.78em">
+        <strong>Conform Reg. UE 2021/2116, Art. 65-68:</strong> Statele membre
+        pot utiliza teledetectia si AI pentru verificarea cererilor de plata directa.
+        Romania are obligatia implementarii pana in 2025.
+        <span class="badge badge-portocaliu">In implementare</span>
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 7 — Stack tehnologic
+     ==================================================== -->
+<section>
+    <h2>Stack tehnologic — 100% gratuit</h2>
+
+    <div class="grid3" style="font-size:0.72em">
+        <div class="card-blue">
+            <strong style="color:#4fc3f7">Date & AI</strong>
+            <hr class="separator">
+            <span class="cod">scikit-learn</span><br>
+            <span class="cod">pandas</span><br>
+            <span class="cod">numpy</span><br>
+            <span class="cod">OpenCV</span>
+        </div>
+        <div class="card-blue">
+            <strong style="color:#81c784">GIS & Harti</strong>
+            <hr class="separator">
+            <span class="cod">GeoPandas</span><br>
+            <span class="cod">Folium</span><br>
+            <span class="cod">pyproj</span><br>
+            <span class="cod">QGIS</span>
+        </div>
+        <div class="card-blue">
+            <strong style="color:#ffcc80">API & Web</strong>
+            <hr class="separator">
+            <span class="cod">Open-Meteo</span><br>
+            <span class="cod">Telegram API</span><br>
+            <span class="cod">Flask/Streamlit</span><br>
+            <span class="cod">GitHub Pages</span>
+        </div>
+    </div>
+
+    <div class="card-info" style="margin-top:14px; font-size:0.78em; text-align:center">
+        <strong>Cost total infrastructura: 0 RON</strong> —
+        toate instrumentele sunt open-source sau au tier gratuit
+        <span class="badge badge-verde">Open Source</span>
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 8 — Directii cercetare
+     ==================================================== -->
+<section>
+    <h2>Directii de cercetare 2026-2027</h2>
+
+    <div style="font-size:0.82em; text-align:left">
+        <div class="fragment-box fragment">
+            <strong style="color:#4fc3f7">Articol ISI (in pregatire)</strong> —
+            AI-based crop classification using multispectral drone imagery in Gorj County.
+            Target: <em>Precision Agriculture / Remote Sensing (Q1)</em>
+        </div>
+        <div class="fragment-box fragment">
+            <strong style="color:#81c784">Articol BDI (in pregatire)</strong> —
+            Automatizarea controalelor APIA prin inteligenta artificiala si teledetectie.
+            Target: <em>Revista UCB / Analele USAMV</em>
+        </div>
+        <div class="fragment-box fragment">
+            <strong style="color:#ffcc80">Proiect UEFISCDI (planificat)</strong> —
+            Sistem integrat AI-drone-LPIS pentru controlul subventiilor agricole.
+            Parteneri: UCB Targu Jiu, APIA Gorj, Prefectura Gorj.
+        </div>
+        <div class="fragment-box fragment">
+            <strong style="color:#ce93d8">Horizon Europe (explorare)</strong> —
+            Digital agriculture tools for CAP 2023-2027 compliance in Romania.
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     SLIDE 9 — Concluzii
+     ==================================================== -->
+<section data-background-gradient="linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%)">
+    <h2>Concluzii</h2>
+
+    <div class="grid2" style="font-size:0.78em">
+        <div class="card-info">
+            <h3>Ce am demonstrat</h3>
+            <ul>
+                <li>AI aplicabil direct in APIA cu 0 costuri</li>
+                <li>Acuratete 98.6% detectie anomalii</li>
+                <li>Procesare 390 parcele in 4.6 secunde</li>
+                <li>Conformitate cu Reg. UE 2021/2116</li>
+            </ul>
+        </div>
+        <div class="card-blue">
+            <h3>Urmatorul pas</h3>
+            <ul>
+                <li>Validare pe date reale LPIS Gorj</li>
+                <li>Parteneriat APIA Central</li>
+                <li>Publicare rezultate ISI/BDI</li>
+                <li>Proiect UEFISCDI 2027</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="separator">
+    <p style="font-size:0.75em; color:#aaa">
+        <strong style="color:white">Prof. Asoc. Dr. Gamulescu Oliviu Mihnea</strong><br>
+        UCB Targu Jiu &nbsp;|&nbsp; APIA Gorj &nbsp;|&nbsp;
+        <a href="https://olimihnea-spec.github.io" style="color:#4fc3f7">
+            olimihnea-spec.github.io
+        </a>
+    </p>
+</section>
+
+<!-- ====================================================
+     SLIDE 10 — Va multumesc
+     ==================================================== -->
+<section data-background-gradient="linear-gradient(135deg, #0a3d0a 0%, #1a5c1a 100%)">
+    <h1 style="font-size:2.5em">Va multumesc!</h1>
+    <br>
+    <p style="font-size:1em; color:#81c784">Intrebari si discutii</p>
+    <br>
+    <div style="font-size:0.75em; color:#aaa">
+        <p>olimihnea@gmail.com</p>
+        <p>olimihnea-spec.github.io</p>
+        <p>UCB Targu Jiu &nbsp;|&nbsp; APIA Gorj &nbsp;|&nbsp; 2026</p>
+    </div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<!-- Reveal.js scripts din CDN -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/notes/notes.js"></script>
+
+<script>
+    Reveal.initialize({
+        // Navigare
+        hash: true,           // URL se actualizeaza cu nr. slide
+        slideNumber: true,    // afiseaza nr. slide (ex: 3/10)
+
+        // Animatii
+        transition: 'slide',  // slide / fade / convex / zoom
+        transitionSpeed: 'default',
+
+        // Aspect
+        width: 1100,
+        height: 650,
+        margin: 0.04,
+
+        // Plugin-uri activate
+        plugins: [ RevealHighlight, RevealNotes ],
+    });
+</script>
+
+</body>
+</html>
