@@ -1,0 +1,384 @@
+/*
+   ziua91_stil.css
+   CSS = cum arata pagina (culori, fonturi, spatiere, layout)
+   Autor: Prof. Asoc. Dr. Gamulescu Oliviu Mihnea — Ziua 91
+*/
+
+/* ============================================================
+   RESET SI BAZA
+   Fiecare browser are stiluri implicite diferite.
+   Reset = pornim de la zero, uniform.
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* latimea include padding si border */
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: #2c3e50;           /* gri inchis — mai bland decat negru pur */
+    line-height: 1.7;         /* spatiu intre randuri */
+    background-color: #ffffff;
+}
+
+/* ============================================================
+   CONTAINER — limiteaza latimea pe ecrane mari
+   ============================================================ */
+.container {
+    max-width: 1100px;        /* nu mai lat de 1100px */
+    margin: 0 auto;           /* centrat pe pagina */
+    padding: 0 24px;          /* spatiu lateral pe mobil */
+}
+
+/* ============================================================
+   HEADER — bara de sus
+   ============================================================ */
+.header {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2e7d32 100%);
+    color: white;
+    padding: 48px 0 32px;
+    text-align: center;
+}
+
+.nume-principal {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;           /* 2 x 16px = 32px */
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.subtitlu {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+}
+
+/* Bara de navigare */
+.navigare {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;           /* pe mobil trece pe rand nou */
+}
+
+.navigare a {
+    color: white;
+    text-decoration: none;     /* fara subliniere */
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 24px;       /* colturi rotunde */
+    font-size: 0.9rem;
+    transition: all 0.25s;     /* animatie la hover */
+}
+
+.navigare a:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: white;
+}
+
+/* ============================================================
+   SECTIUNI GENERALE
+   ============================================================ */
+.sectiune {
+    padding: 64px 0;
+}
+
+.sectiune-alba { background-color: #ffffff; }
+.sectiune-gri  { background-color: #f4f6f8; }
+.sectiune-inchisa { background-color: #1a3a5c; color: white; }
+
+.titlu-sectiune {
+    font-family: 'Merriweather', serif;
+    font-size: 1.7rem;
+    color: #1a3a5c;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+/* Linia decorativa sub titlu */
+.titlu-sectiune::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #2e7d32;       /* verde APIA */
+    border-radius: 2px;
+}
+
+.titlu-alb { color: white; }
+.titlu-alb::after { background: rgba(255,255,255,0.6); }
+
+.subtitlu-sectiune {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: -28px;
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   CARD PROFIL — sectiunea Despre
+   ============================================================ */
+.card-profil {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.avatar {
+    min-width: 100px;
+    height: 100px;
+    border-radius: 50%;        /* cerc */
+    background: linear-gradient(135deg, #1a3a5c, #2e7d32);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;            /* nu se micsoreaza */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.text-profil p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+/* Cifre cheie */
+.cifre-cheie {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.cifra {
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 12px;
+    padding: 20px 32px;
+    min-width: 120px;
+    border-bottom: 3px solid #2e7d32;
+}
+
+.numar {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a3a5c;
+    font-family: 'Merriweather', serif;
+}
+
+.eticheta {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   GRID — layout pe coloane
+   ============================================================ */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 coloane egale */
+    gap: 24px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   /* 2 coloane egale */
+    gap: 24px;
+}
+
+/* Pe ecrane mici — 1 coloana */
+@media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .card-profil { flex-direction: column; align-items: center; }
+    .nume-principal { font-size: 1.4rem; }
+}
+
+/* ============================================================
+   CARD — cutia alba cu umbre
+   ============================================================ */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-top: 4px solid #2e7d32;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);    /* se ridica la hover */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #1a3a5c;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: #555;
+    padding-left: 16px;
+    position: relative;
+}
+
+.card ul li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ============================================================
+   PROIECTE
+   ============================================================ */
+.proiect {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: relative;
+}
+
+.proiect h3 {
+    color: #1a3a5c;
+    font-size: 1.05rem;
+    margin: 12px 0 8px;
+    font-weight: 700;
+}
+
+.proiect p {
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-verde { background: #d5e8d4; color: #2e7d32; }
+.badge-albastru { background: #dae8fc; color: #1a3a5c; }
+
+.tehnologii {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tehnologii span {
+    background: #f4f6f8;
+    color: #1a3a5c;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ============================================================
+   PUBLICATII
+   ============================================================ */
+.publicatie {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    border-left: 4px solid #2e7d32;
+}
+
+.an-pub {
+    min-width: 50px;
+    font-weight: 700;
+    color: #2e7d32;
+    font-size: 1rem;
+    padding-top: 2px;
+}
+
+.text-pub {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.grid-contact {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.item-contact {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+}
+
+.icon-contact {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    background: #111;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 28px 0;
+    font-size: 0.88rem;
+}
+
+.footer p { margin-bottom: 4px; }
+
+.footer-mic {
+    font-size: 0.78rem;
+    opacity: 0.5;
+}

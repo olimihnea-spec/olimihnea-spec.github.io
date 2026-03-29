@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<!--
+  ZIUA 91 — Prima pagina web profesionala
+  HTML = structura (oasele)
+  CSS  = stilul (hainele)
+  Autor: Prof. Asoc. Dr. Gamulescu Oliviu Mihnea
+-->
+
+<head>
+    <!-- HEAD = informatii despre pagina (nu se vad direct) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prof. Asoc. Dr. Gamulescu Oliviu Mihnea — APIA Gorj, UCB Targu Jiu">
+    <title>Prof. Asoc. Dr. Gamulescu Oliviu Mihnea</title>
+
+    <!-- Legatura catre fisierul CSS extern -->
+    <link rel="stylesheet" href="ziua91_stil.css">
+
+    <!-- Font Google gratuit — mai elegant decat Arial -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================================================
+         HEADER — Bara de sus cu numele si titlul
+         ================================================ -->
+    <header class="header">
+        <div class="container">
+            <h1 class="nume-principal">Prof. Asoc. Dr. Gamulescu Oliviu Mihnea</h1>
+            <p class="subtitlu">Consilier Superior APIA Gorj &nbsp;|&nbsp; Cadru Didactic UCB Targu Jiu</p>
+
+            <!-- Bara de navigare -->
+            <nav class="navigare">
+                <a href="#despre">Despre</a>
+                <a href="#expertiza">Expertiza</a>
+                <a href="#proiecte">Proiecte</a>
+                <a href="#publicatii">Publicatii</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================================================
+         SECTIUNEA DESPRE
+         ================================================ -->
+    <section id="despre" class="sectiune sectiune-alba">
+        <div class="container">
+            <h2 class="titlu-sectiune">Despre mine</h2>
+
+            <div class="card-profil">
+                <!-- Poza de profil (initiale daca nu ai poza) -->
+                <div class="avatar">OMG</div>
+
+                <div class="text-profil">
+                    <p>
+                        Doctor in Ingineria Sistemelor, specializare <strong>Recunoastere automata a culturilor
+                        cu ajutorul dronelor</strong> — Universitatea din Petrosani (2024).
+                    </p>
+                    <p>
+                        Profesor Asociat la <strong>Universitatea Constantin Brancusi</strong> Targu Jiu,
+                        Master Managementul Riscului in Agricultura. Consilier Superior cu peste
+                        <strong>20 de ani experienta</strong> la APIA Centrul Judetean Gorj.
+                    </p>
+                    <p>
+                        Absolvent — <strong>promotia a III-a</strong> a cursului postuniversitar
+                        <em>Managementul Protectiei Infrastructurilor Critice</em>,
+                        Academia Fortelor Terestre „Nicolae Balcescu" Sibiu.
+                    </p>
+                    <p>
+                        Licentiat in <strong>Relatii Internationale si Studii Europene</strong> (2010),
+                        cu experienta in diplomatie, drept european si administratie publica.
+                    </p>
+                    <p>
+                        Domeniile mele de cercetare: <em>inteligenta artificiala in agricultura,
+                        teledetectie si drone, managementul riscului agricol, sisteme GIS.</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cifre cheie -->
+            <div class="cifre-cheie">
+                <div class="cifra">
+                    <span class="numar">20+</span>
+                    <span class="eticheta">ani APIA</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">2024</span>
+                    <span class="eticheta">Doctor</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">90+</span>
+                    <span class="eticheta">zile Python</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">Prom. III</span>
+                    <span class="eticheta">Infrastructuri Critice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         SECTIUNEA EXPERTIZA
+         ================================================ -->
+    <section id="expertiza" class="sectiune sectiune-gri">
+        <div class="container">
+            <h2 class="titlu-sectiune">Domenii de expertiza</h2>
+
+            <div class="grid-3">
+
+                <div class="card">
+                    <div class="card-icon">&#x1F4BB;</div>
+                    <h3>AI &amp; Python</h3>
+                    <ul>
+                        <li>Machine Learning agricol</li>
+                        <li>Computer Vision drone</li>
+                        <li>Analiza spatiala GeoPandas</li>
+                        <li>Automatizare rapoarte APIA</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">&#x1F6F8;</div>
+                    <h3>Drone &amp; Teledetectie</h3>
+                    <ul>
+                        <li>NDVI, NDRE, NDWI</li>
+                        <li>Sentinel-2 procesare</li>
+                        <li>Fotogrametrie agricola</li>
+                        <li>EASA Categoria OPEN A2</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">&#x1F30D;</div>
+                    <h3>GIS &amp; LPIS</h3>
+                    <ul>
+                        <li>QGIS analiza spatiala</li>
+                        <li>PostGIS coordonate GPS</li>
+                        <li>Stereo70 Romania</li>
+                        <li>Export GeoJSON / SHP</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">&#x1F33E;</div>
+                    <h3>APIA &amp; PAC</h3>
+                    <ul>
+                        <li>IACS, LPIS, AMS</li>
+                        <li>Reg. UE 2021/2116</li>
+                        <li>Controale pe teren</li>
+                        <li>20+ ani Consilier Superior</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">&#x1F4DA;</div>
+                    <h3>Academic UCB</h3>
+                    <ul>
+                        <li>Master Managementul Riscului</li>
+                        <li>Suporturi curs ARACIS</li>
+                        <li>Articole ISI / BDI</li>
+                        <li>Proiecte UEFISCDI</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">&#x26A1;</div>
+                    <h3>Instrumente digitale</h3>
+                    <ul>
+                        <li>Python, scikit-learn, OpenCV</li>
+                        <li>Streamlit, Flask, SQLite</li>
+                        <li>Telegram Bot, Email automat</li>
+                        <li>Word / Excel / PDF automat</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         SECTIUNEA PROIECTE PYTHON
+         ================================================ -->
+    <section id="proiecte" class="sectiune sectiune-alba">
+        <div class="container">
+            <h2 class="titlu-sectiune">Proiecte Python — 90 de zile</h2>
+            <p class="subtitlu-sectiune">Aplicatii reale dezvoltate in cadrul cursului Claude Code 2026</p>
+
+            <div class="grid-2">
+
+                <div class="proiect">
+                    <span class="badge badge-verde">Finalizat</span>
+                    <h3>Pipeline CV → AI → APIA</h3>
+                    <p>Segmentare parcele cu OpenCV, clasificare culturi cu Random Forest,
+                    export Shapefile Stereo70 + GPX. 390 parcele procesate in 4.6 secunde.</p>
+                    <div class="tehnologii">
+                        <span>Python</span><span>OpenCV</span><span>scikit-learn</span><span>GeoPandas</span>
+                    </div>
+                </div>
+
+                <div class="proiect">
+                    <span class="badge badge-verde">Finalizat</span>
+                    <h3>Sistem multi-agent APIA</h3>
+                    <p>4 agenti autonomi: Inspector, Jurist, Raportor, Detector anomalii.
+                    Genereaza notificari oficiale cu Reg. UE 2021/2116.</p>
+                    <div class="tehnologii">
+                        <span>Python</span><span>Streamlit</span><span>python-docx</span>
+                    </div>
+                </div>
+
+                <div class="proiect">
+                    <span class="badge badge-verde">Finalizat</span>
+                    <h3>Bot Telegram Alerte Agricole</h3>
+                    <p>Alerte meteo reale (Open-Meteo), preturi cereale, termene APIA
+                    trimise automat pe telefon. Fara costuri.</p>
+                    <div class="tehnologii">
+                        <span>Python</span><span>Telegram API</span><span>Open-Meteo</span>
+                    </div>
+                </div>
+
+                <div class="proiect">
+                    <span class="badge badge-verde">Finalizat</span>
+                    <h3>Harti LPIS Interactive</h3>
+                    <p>Harti APIA in browser cu click pe parcela = detalii fermier.
+                    Export GeoJSON pentru QGIS. PostGIS concepte.</p>
+                    <div class="tehnologii">
+                        <span>Python</span><span>Folium</span><span>GeoPandas</span><span>QGIS</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         SECTIUNEA PUBLICATII
+         ================================================ -->
+    <section id="publicatii" class="sectiune sectiune-gri">
+        <div class="container">
+            <h2 class="titlu-sectiune">Publicatii &amp; Cercetare</h2>
+
+            <div class="publicatie">
+                <span class="an-pub">2024</span>
+                <div class="text-pub">
+                    <strong>Teza de doctorat:</strong> Contributii privind recunoasterea automata
+                    a culturilor cu ajutorul unei Drone —
+                    <em>Universitatea din Petrosani, Ingineria Sistemelor</em>
+                </div>
+            </div>
+
+            <div class="publicatie">
+                <span class="an-pub">2026</span>
+                <div class="text-pub">
+                    <strong>In pregatire (ISI):</strong> AI-based crop classification using
+                    multispectral drone imagery in Gorj County, Romania —
+                    <em>target: Precision Agriculture / Remote Sensing</em>
+                </div>
+            </div>
+
+            <div class="publicatie">
+                <span class="an-pub">2026</span>
+                <div class="text-pub">
+                    <strong>In pregatire (BDI):</strong> Automatizarea controalelor APIA
+                    prin inteligenta artificiala si teledetectie —
+                    <em>Revista de Management si Inginerie, UCB Targu Jiu</em>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================
+         SECTIUNEA CONTACT
+         ================================================ -->
+    <section id="contact" class="sectiune sectiune-inchisa">
+        <div class="container">
+            <h2 class="titlu-sectiune titlu-alb">Contact</h2>
+
+            <div class="grid-contact">
+                <div class="item-contact">
+                    <span class="icon-contact">&#x1F3EB;</span>
+                    <span>Universitatea Constantin Brancusi<br>Targu Jiu, Gorj, Romania</span>
+                </div>
+                <div class="item-contact">
+                    <span class="icon-contact">&#x1F4BC;</span>
+                    <span>APIA Centrul Judetean Gorj<br>Serviciul Control pe Teren</span>
+                </div>
+                <div class="item-contact">
+                    <span class="icon-contact">&#x1F4E7;</span>
+                    <span>olimihnea@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================
+         FOOTER
+         ================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Prof. Asoc. Dr. Gamulescu Oliviu Mihnea &nbsp;|&nbsp;
+                UCB Targu Jiu &nbsp;|&nbsp; APIA Gorj
+            </p>
+            <p class="footer-mic">
+                Site construit cu HTML + CSS pur &mdash; Ziua 91 din cursul Claude Code
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
