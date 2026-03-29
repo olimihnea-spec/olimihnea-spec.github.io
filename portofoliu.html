@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofoliu proiecte Python — Prof. Asoc. Dr. Gamulescu Oliviu Mihnea">
+    <title>Portofoliu Python — Gamulescu Oliviu Mihnea</title>
+    <link rel="stylesheet" href="ziua91_stil.css">
+    <link rel="stylesheet" href="portofoliu_stil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="nume-principal">Portofoliu Proiecte Python</h1>
+            <p class="subtitlu">Prof. Asoc. Dr. Gamulescu Oliviu Mihnea &nbsp;|&nbsp; 93 zile &nbsp;|&nbsp; 2026</p>
+            <nav class="navigare">
+                <a href="index.html">Acasa</a>
+                <a href="#bloc-l">AI Agricultura</a>
+                <a href="#bloc-m">Computer Vision</a>
+                <a href="#bloc-n">API & Automatizare</a>
+                <a href="#bloc-o">GIS & Baze de date</a>
+                <a href="#bloc-p">Web & Brand</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- STATISTICI GENERALE -->
+    <section class="sectiune sectiune-gri">
+        <div class="container">
+            <h2 class="titlu-sectiune">93 de zile de Python aplicat in agricultura</h2>
+            <div class="cifre-cheie">
+                <div class="cifra">
+                    <span class="numar">93</span>
+                    <span class="eticheta">Zile de cod</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">50+</span>
+                    <span class="eticheta">Fisiere Python</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">15+</span>
+                    <span class="eticheta">Librarii</span>
+                </div>
+                <div class="cifra">
+                    <span class="numar">100%</span>
+                    <span class="eticheta">Gratuit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC L — AI Agricultura -->
+    <section id="bloc-l" class="sectiune sectiune-alba">
+        <div class="container">
+            <div class="bloc-header bloc-verde">
+                <span class="bloc-litera">L</span>
+                <div>
+                    <h2>AI aplicat in Agricultura</h2>
+                    <p>Zilele 71-75 &nbsp;|&nbsp; scikit-learn, IsolationForest, RandomForest</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="proiect-card">
+                    <div class="proiect-nr">71</div>
+                    <h3>Machine Learning — Clasificare culturi</h3>
+                    <p>Primul model AI: RandomForestClassifier antrenant pe date spectrale.
+                    5 culturi, 320 parcele, acuratete 57.8% → 79.7% dupa optimizare.</p>
+                    <div class="tehnologii">
+                        <span>scikit-learn</span><span>RandomForest</span><span>StandardScaler</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">Acuratete: 79.7%</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">72</div>
+                    <h3>Clasificare spectrala avansata</h3>
+                    <p>7 indici spectrali: NDVI, NDRE, NDWI, NBR, EVI, BSI, ExG.
+                    Cross-validation 5-fold. Acuratete crescuta cu 22 puncte procentuale.</p>
+                    <div class="tehnologii">
+                        <span>NDVI</span><span>NDRE</span><span>cross_val_score</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">R2: 0.797</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">73</div>
+                    <h3>Predictie productie agricola</h3>
+                    <p>Regresie (nu clasificare): predictia productiei in t/ha din date
+                    meteo + NDVI. LinearRegression vs RandomForestRegressor.</p>
+                    <div class="tehnologii">
+                        <span>LinearRegression</span><span>MAE</span><span>RMSE</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">R2: 0.765</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">74</div>
+                    <h3>Detectie anomalii APIA + Raport oficial</h3>
+                    <p>IsolationForest (nesupervizat) + RandomForest: detectie incendii,
+                    inundatii, calamitati, frauda. Raport Word cu Reg. UE 2021/2116.</p>
+                    <div class="tehnologii">
+                        <span>IsolationForest</span><span>python-docx</span><span>Reg. UE 2021/2116</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">Acuratete: 98.6%</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card proiect-featured">
+                    <div class="proiect-nr">75</div>
+                    <span class="badge badge-verde">Pipeline complet</span>
+                    <h3>Pipeline complet Drone → AI → Word + Excel</h3>
+                    <p>6 etape automatizate: 390 parcele, 12474 ha procesate in 4.6 secunde.
+                    Genereaza raport Word + Excel cu grafic dintr-o singura comanda.</p>
+                    <div class="tehnologii">
+                        <span>scikit-learn</span><span>openpyxl</span><span>python-docx</span><span>matplotlib</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">390 parcele in 4.6s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC M — Computer Vision -->
+    <section id="bloc-m" class="sectiune sectiune-gri">
+        <div class="container">
+            <div class="bloc-header bloc-albastru">
+                <span class="bloc-litera">M</span>
+                <div>
+                    <h2>Computer Vision &amp; Drone</h2>
+                    <p>Zilele 76-80 &nbsp;|&nbsp; OpenCV, YOLO, Shapely, pyshp, pyproj</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="proiect-card">
+                    <div class="proiect-nr">76</div>
+                    <h3>OpenCV — Analiza ortofoto agricola</h3>
+                    <p>Mascare HSV pentru vegetatie (40.8%), apa (8.3%), zone arse.
+                    ExG = 2G-R-B ca proxy NDVI din imagini RGB.</p>
+                    <div class="tehnologii">
+                        <span>OpenCV</span><span>HSV</span><span>ExG</span><span>Canny</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">77</div>
+                    <h3>YOLO — Detectie obiecte agricole</h3>
+                    <p>Bounding boxes, confidence score, IoU, Non-Maximum Suppression.
+                    Conversie GSD: pixeli → hectare. 17 detectii dupa NMS.</p>
+                    <div class="tehnologii">
+                        <span>YOLO</span><span>IoU</span><span>NMS</span><span>GSD</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">78</div>
+                    <h3>Segmentare parcele + Export GIS</h3>
+                    <p>11 poligoane neregulate cu arie exacta. Export GeoJSON, Shapefile
+                    Stereo70 (EPSG:3844) si GPX pentru telefon/Garmin.</p>
+                    <div class="tehnologii">
+                        <span>cv2.findContours</span><span>pyproj</span><span>pyshp</span><span>GPX</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">79</div>
+                    <h3>Textura GLCM + Haralick</h3>
+                    <p>GLCM manual (32 niveluri gri), 6 caracteristici Haralick, K-Means
+                    culori dominante, grafic radar. Acuratete 100% pe 6 clase.</p>
+                    <div class="tehnologii">
+                        <span>GLCM</span><span>Haralick</span><span>K-Means</span><span>Radar plot</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">Acuratete: 100%</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card proiect-featured">
+                    <div class="proiect-nr">80</div>
+                    <span class="badge badge-verde">Pipeline complet</span>
+                    <h3>Pipeline CV complet → Word + SHP + GPX</h3>
+                    <p>7 etape in 9.2 secunde: segmentare OpenCV + textura Haralick +
+                    clasificare RF + raport Word + Shapefile Stereo70 + GPX.</p>
+                    <div class="tehnologii">
+                        <span>OpenCV</span><span>scikit-learn</span><span>Stereo70</span><span>GPX</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">7 etape in 9.2s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC N — API & Automatizare -->
+    <section id="bloc-n" class="sectiune sectiune-alba">
+        <div class="container">
+            <div class="bloc-header bloc-portocaliu">
+                <span class="bloc-litera">N</span>
+                <div>
+                    <h2>Automatizare &amp; API-uri externe</h2>
+                    <p>Zilele 81-85 &nbsp;|&nbsp; requests, BeautifulSoup, Telegram, Jinja2</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="proiect-card">
+                    <div class="proiect-nr">81</div>
+                    <h3>Web Scraping preturi cereale</h3>
+                    <p>requests + BeautifulSoup, User-Agent header. Profitabilitate:
+                    Rapita cea mai buna (3180 RON/ha, 54.1% marja). Word + CSV + JSON + PNG.</p>
+                    <div class="tehnologii">
+                        <span>BeautifulSoup</span><span>requests</span><span>pandas</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">82</div>
+                    <h3>API Open-Meteo — Date meteo reale</h3>
+                    <p>Date reale pentru 6 localitati Gorj. 88 zile istorice: Tmed=2.8C,
+                    257.9mm precipitatii, 51 zile inghet. Indici De Martonne, ETP.</p>
+                    <div class="tehnologii">
+                        <span>Open-Meteo</span><span>twinx()</span><span>De Martonne</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">Date reale Gorj</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">83</div>
+                    <h3>Bot Telegram — Alerte agricole automate</h3>
+                    <p>sendMessage HTML, sendPhoto, getUpdates. 7 mesaje trimise:
+                    meteo real, preturi, termene APIA, raport zilnic, 2 grafice.</p>
+                    <div class="tehnologii">
+                        <span>Telegram API</span><span>Open-Meteo</span><span>requests</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">84</div>
+                    <h3>Bot Telegram interactiv + securitate .env</h3>
+                    <p>Polling getUpdates, rutare comenzi /meteo /preturi /apia /raport.
+                    Token protejat in fisier .env — nu apare niciodata in cod.</p>
+                    <div class="tehnologii">
+                        <span>python-dotenv</span><span>Polling</span><span>.env</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">85</div>
+                    <h3>Email automat cu template-uri Jinja2</h3>
+                    <p>3 template-uri: APIA normal, preturi, urgent. Selectie automata
+                    dupa statusul dosarului. 5 fermieri fictivi, raport JSON.</p>
+                    <div class="tehnologii">
+                        <span>Jinja2</span><span>smtplib</span><span>MIMEMultipart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC O — GIS & Baze de date -->
+    <section id="bloc-o" class="sectiune sectiune-gri">
+        <div class="container">
+            <div class="bloc-header bloc-rosu">
+                <span class="bloc-litera">O</span>
+                <div>
+                    <h2>GIS avansat &amp; Baze de date</h2>
+                    <p>Zilele 86-90 &nbsp;|&nbsp; SQLite, PostGIS, GeoPandas, Folium, fpdf2</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="proiect-card">
+                    <div class="proiect-nr">86</div>
+                    <h3>Baza de date APIA — SQL profesional</h3>
+                    <p>5 tabele interconectate: fermieri, culturi, parcele, cereri_apia,
+                    controale. JOIN-uri, GROUP BY, statistici agregate.</p>
+                    <div class="tehnologii">
+                        <span>SQLite</span><span>SQL</span><span>JOIN</span><span>psycopg2</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">87</div>
+                    <h3>PostGIS — Coordonate GPS in baza de date</h3>
+                    <p>Geometrie poligoane stocata ca GeoJSON. ST_Distance, ST_DWithin,
+                    ST_Area, ST_Centroid simulate. Export GeoJSON pentru QGIS.</p>
+                    <div class="tehnologii">
+                        <span>Shapely</span><span>GeoPandas</span><span>EPSG:3844</span><span>QGIS</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">88</div>
+                    <h3>GeoPandas — Analiza spatiala completa</h3>
+                    <p>Suprafata declarata vs calculata geometric. Spatial join cu zone
+                    geografice. Detectie anomalii NDVI. Harta dubla culturi + NDVI.</p>
+                    <div class="tehnologii">
+                        <span>GeoPandas</span><span>sjoin()</span><span>to_crs()</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card">
+                    <div class="proiect-nr">89</div>
+                    <h3>Harti LPIS interactive in browser</h3>
+                    <p>3 harti HTML: status dosare, NDVI vegetatie, harta combinata cu
+                    layere selectabile. Click parcela = detalii complete fermier.</p>
+                    <div class="tehnologii">
+                        <span>Folium</span><span>Popup</span><span>FeatureGroup</span><span>LayerControl</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card proiect-featured">
+                    <div class="proiect-nr">90</div>
+                    <span class="badge badge-verde">Raport oficial</span>
+                    <h3>Export harti rapoarte oficiale APIA</h3>
+                    <p>Harta 300 DPI + tablou de bord + Word cu harti incorporate +
+                    PDF complet cu tabel colorat, concluzii si semnatura.</p>
+                    <div class="tehnologii">
+                        <span>matplotlib 300dpi</span><span>python-docx</span><span>fpdf2</span>
+                    </div>
+                    <div class="indicatori">
+                        <span class="ind-bun">Word + PDF oficial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOC P — Web & Brand -->
+    <section id="bloc-p" class="sectiune sectiune-alba">
+        <div class="container">
+            <div class="bloc-header bloc-mov">
+                <span class="bloc-litera">P</span>
+                <div>
+                    <h2>Prezenta online &amp; Brand academic</h2>
+                    <p>Zilele 91-95 &nbsp;|&nbsp; HTML, CSS, GitHub Pages</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="proiect-card">
+                    <div class="proiect-nr">91</div>
+                    <h3>Prima pagina web — HTML + CSS</h3>
+                    <p>Site academic complet: profil, expertiza (6 carduri), proiecte,
+                    publicatii, contact. Responsive — functioneaza si pe telefon.</p>
+                    <div class="tehnologii">
+                        <span>HTML5</span><span>CSS3</span><span>Flexbox</span><span>Grid</span>
+                    </div>
+                </div>
+
+                <div class="proiect-card proiect-featured">
+                    <div class="proiect-nr">92</div>
+                    <span class="badge badge-verde">LIVE</span>
+                    <h3>GitHub Pages — Site academic online</h3>
+                    <p>Site publicat gratuit pe internet. Vizibil de orice om din lume.
+                    Actualizabil oricand din GitHub.</p>
+                    <div class="tehnologii">
+                        <span>GitHub</span><span>GitHub Pages</span><span>git</span>
+                    </div>
+                    <div class="indicatori">
+                        <a href="https://olimihnea-spec.github.io" target="_blank" class="link-site">
+                            olimihnea-spec.github.io →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="proiect-card proiect-featured">
+                    <div class="proiect-nr">93</div>
+                    <span class="badge badge-verde">Aceasta pagina</span>
+                    <h3>Portofoliu complet proiecte Python</h3>
+                    <p>Toate proiectele organizate pe blocuri tematice, cu tehnologii,
+                    rezultate si descrieri. Vizibil public pe GitHub Pages.</p>
+                    <div class="tehnologii">
+                        <span>HTML5</span><span>CSS3</span><span>GitHub Pages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; 2026 Prof. Asoc. Dr. Gamulescu Oliviu Mihnea &nbsp;|&nbsp;
+                <a href="index.html" style="color:rgba(255,255,255,0.7)">Acasa</a> &nbsp;|&nbsp;
+                <a href="https://olimihnea-spec.github.io" style="color:rgba(255,255,255,0.7)">Site live</a>
+            </p>
+            <p class="footer-mic">93 de zile de Python aplicat in agricultura — UCB Targu Jiu &amp; APIA Gorj 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

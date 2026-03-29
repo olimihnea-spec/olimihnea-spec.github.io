@@ -1,0 +1,131 @@
+/*
+   portofoliu_stil.css
+   Stiluri suplimentare pentru pagina de portofoliu
+*/
+
+/* Header bloc tematic */
+.bloc-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    color: white;
+}
+
+.bloc-header h2 {
+    font-size: 1.4rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.bloc-header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.bloc-litera {
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-family: 'Merriweather', serif;
+    opacity: 0.9;
+    min-width: 50px;
+    text-align: center;
+}
+
+.bloc-verde     { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+.bloc-albastru  { background: linear-gradient(135deg, #0d47a1, #1565c0); }
+.bloc-portocaliu{ background: linear-gradient(135deg, #e65100, #f57c00); }
+.bloc-rosu      { background: linear-gradient(135deg, #b71c1c, #c62828); }
+.bloc-mov       { background: linear-gradient(135deg, #4a148c, #6a1b9a); }
+
+/* Card proiect */
+.proiect-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    border-left: 4px solid #2e7d32;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.proiect-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.proiect-featured {
+    border-left-color: #1565c0;
+    background: #fafcff;
+}
+
+.proiect-nr {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #1a3a5c;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.proiect-card h3 {
+    font-size: 1rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.proiect-card p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* Indicatori rezultate */
+.indicatori {
+    margin-top: 10px;
+}
+
+.ind-bun {
+    display: inline-block;
+    background: #d5e8d4;
+    color: #2e7d32;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Link site live */
+.link-site {
+    display: inline-block;
+    background: #1a3a5c;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.link-site:hover {
+    background: #2e7d32;
+}
+
+/* Titlu sectiune fara linie verde (pentru blocuri cu header colorat) */
+.titlu-sectiune-mic {
+    font-size: 1.1rem;
+    color: #1a3a5c;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
